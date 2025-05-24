@@ -4,7 +4,7 @@
 
 The Steganography App is a secure and intuitive Android application designed to allow users to hide messages within images (encoding) and extract hidden messages from images (decoding). This project focuses on delivering a robust and user-friendly interface with a distinct classic and elegant visual theme.
 
-#AppInterface
+## AppInterface
 
 
 ![image](https://github.com/user-attachments/assets/bcbafa5f-ee57-4d7c-a0cd-5174a38de7e3)
