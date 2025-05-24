@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C2B3C"
+    tools:context=".EncodeActivity">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Back"
+        app:tint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/encodeScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encode"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="@id/backButton"
+        app:layout_constraintBottom_toBottomOf="@id/backButton" />
+
+    <ImageView
+        android:id="@+id/selectedImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_image_placeholder" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/encodeScreenTitle"
+        android:contentDescription="Selected Image" />
+
+    <Button
+        android:id="@+id/chooseImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose an Image"
+        android:textColor="#FFFFFF"
+        android:drawableStart="@drawable/ic_photo_library"
+        android:drawablePadding="8dp"
+        android:backgroundTint="#504F60" app:cornerRadius="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectedImageView" />
+
+    <TextView
+        android:id="@+id/messageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message :"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chooseImageButton" />
+
+    <EditText
+        android:id="@+id/messageInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_edittext_background" android:hint="Text Input"
+        android:padding="12dp"
+        android:textColorHint="#999999"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:maxLines="3"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/messageLabel"
+        app:layout_constraintTop_toTopOf="@id/messageLabel"
+        app:layout_constraintBottom_toBottomOf="@id/messageLabel" />
+
+    <TextView
+        android:id="@+id/secretKeyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Secret Key :"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/messageInput" />
+
+    <EditText
+        android:id="@+id/secretKeyInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:hint="Key Input"
+        android:padding="12dp"
+        android:textColorHint="#999999"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:inputType="textPassword" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/secretKeyLabel"
+        app:layout_constraintTop_toTopOf="@id/secretKeyLabel"
+        app:layout_constraintBottom_toBottomOf="@id/secretKeyLabel" />
+
+    <Button
+        android:id="@+id/encodeAndSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encode and Save"
+        android:textColor="#FFFFFF"
+        android:drawableStart="@drawable/ic_download"
+        android:drawablePadding="8dp"
+        android:backgroundTint="#7B61FF" app:cornerRadius="8dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secretKeyInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
