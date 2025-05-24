@@ -1,7 +1,3 @@
-Okay, here's a `README.md` article for your Steganography app, incorporating the design elements and functionality we've discussed.
-
----
-
 # Steganography App
 
 ## Overview
